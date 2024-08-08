@@ -48,7 +48,7 @@ spec:
             cpu: {{ .Values.deploy.requestCpu }}
             memory: {{ .Values.deploy.requestMemory }}
         ports:
-        - containerPort: {{ int .Values.deploy.targetport }}
+        - containerPort: {{ int .Values.deploy.port }}
       restartPolicy: Always
 {{- if .Values.nodeselector.enabled }}
       nodeSelector:
